@@ -8,8 +8,4 @@ mod = Blueprint(
 
 @mod.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template("home.html")
-
-@mod.route("/about")
-def about():
-    return render_template("about.html")
+    return render_template("ingdex.html", token="Hello Flask+React")
