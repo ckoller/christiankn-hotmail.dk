@@ -5,7 +5,6 @@ mod = Blueprint(
     template_folder = 'templates'
 )
 
-
 @mod.route('/', methods=['GET', 'POST'])
 def home():
     return render_template("ingdex.html", token="Hello Flask+React")
