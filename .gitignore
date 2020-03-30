@@ -1,10 +1,8 @@
 .idea/*
 
 # react builds in flask folder
-flask_backend/templates/
-flask_backend/static/
-
-
+flask_backend/static/*
+flask_backend/templates/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
