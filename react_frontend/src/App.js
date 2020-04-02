@@ -4,13 +4,16 @@ import {Layout, Header, Navigation, Drawer, Content} from "react-mdl";
 import Main from "./components/main";
 import {Link} from "react-router-dom";
 
-
 class App extends Component {
     render() {
         return (
-            <div className="demo-big-content">
+            <div>
                 <Layout>
-                    <Header title="Title" scroll>
+                    <Header className="header-color" title={
+                        <Link style={{textDecoration: 'none', color: 'white'}} to='/'>
+                            PORTFOLIO - CHRISTIAN KOLLER NIELSEN
+                        </Link>
+                    } scroll>
                         <Navigation>
                             <Link to='/resume'>Resume</Link>
                             <Link to={'/aboutme'}>About Me</Link>
@@ -18,7 +21,11 @@ class App extends Component {
                             <Link to={'/contact'}>Contact</Link>
                         </Navigation>
                     </Header>
-                    <Drawer title="Title">
+                    <Drawer title={
+                        <Link to='/'>
+                            PORTFOLIO
+                        </Link>
+                    }>
                         <Navigation>
                             <Link to='/resume'>Resume</Link>
                             <Link to={'/aboutme'}>About Me</Link>
@@ -40,3 +47,4 @@ class App extends Component {
 
 
 export default App;
+
