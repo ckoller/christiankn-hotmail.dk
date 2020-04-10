@@ -89,7 +89,6 @@
 }
 
 .contact-grid h2 {
-    font-family: 'Anton';
     font-weight: bold;
 
 }
@@ -98,7 +97,6 @@
     width: 75%;
     margin: auto;
     padding-top: 1em;
-    font-family: 'Oxygen';
 }
 
 
@@ -148,3 +146,90 @@
 .resume-left-side h4 {
     color: grey;
 }
+
+/* Education Component */
+
+.Collapsible__contentInner {
+    background: #47423f;
+}
+
+.Collapsible__contentInner p {
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.Collapsible__contentInner p:first-child {
+    margin-top: 10px;
+}
+
+.Collapsible__trigger {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333333;
+    position: relative;
+    border: 1px solid white;
+    padding: 10px;
+    background: #3e3a37;
+    color: white;
+}
+
+.Collapsible__trigger:after {
+    font-family: 'FontAwesome';
+    content: '\f107';
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: block;
+    transition: transform 300ms;
+}
+
+.Collapsible__trigger.is-open:after {
+    transform: rotateZ(180deg);
+}
+
+.Collapsible__trigger.is-disabled {
+    opacity: 0.5;
+    background-color: grey;
+}
+
+.CustomTriggerCSS {
+    background-color: lightcoral;
+    transition: background-color 200ms ease;
+}
+
+.CustomTriggerCSS--open {
+    background-color: darkslateblue;
+}
+
+.Collapsible__custom-sibling {
+    padding: 5px;
+    background-color: #CBB700;
+    color: black;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Skills */
+
+.skills h5 {
+    margin-bottom: 0;
+}
+
+/* About-me */
+
+
+.about {
+    padding: 2em;
+    background: #27221F;
+    color: white;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+

@@ -1,7 +1,9 @@
 import React, {Component} from "react";
-import { Grid, Cell} from 'react-mdl';
+import {Grid, Cell} from 'react-mdl';
 import ava from './../graphics/avatar_man.png'
 import Education from "./education";
+import Experience from "./experience";
+import Skills from "./skills";
 
 class Resume extends Component {
     render() {
@@ -11,16 +13,14 @@ class Resume extends Component {
                 <Grid>
                     <Cell col={4}>
                         <div className='resume-left-side'>
-                            <img src={ava} alt="avatar" />
+                            <img src={ava} alt="avatar"/>
                             <h2> Christian Koller Nielsen </h2>
                             <h4> Computer Scientist </h4>
                             <hr/>
                             <p>
-                                spiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                                aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                                I just finished a masters degree in computer science specializing in cryptology.
+                                Through my studies I have gained a broad field of interest which includes the following:
+                                Software Development, Web Development, IT security, Cryptology, Data Science, Blockchain, Peer-2-peer systems.
                             </p>
                             <hr/>
                             <h5>Address</h5>
@@ -41,10 +41,14 @@ class Resume extends Component {
                         </div>
                     </Cell>
                     <Cell col={8} className='resume-right-side'>
-                        <h2>
-                            Education
-                        </h2>
+                        <h2> Education </h2>
                         <Education/>
+                        <hr style={{borderTop: '3px solid #e22947'}}/>
+                        <h2> Work Experience</h2>
+                        <Experience/>
+                        <hr style={{borderTop: '3px solid #e22947'}}/>
+                        <h2> Skills </h2>
+                        <Skills/>
 
                     </Cell>
                 </Grid>

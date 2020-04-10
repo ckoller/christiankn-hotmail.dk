@@ -18,16 +18,16 @@ class Landing extends Component {
                             <hr/>
                             <p> Java | C# | Python | React | HTML/CSS | Databases </p>
                             <div className="social-links">
-                                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                                <a href="https://www.linkedin.com/in/christian-koller-nielsen-79639314b/" rel="noopener noreferrer" target="_blank">
                                     <i className="fa fa-linkedin-square" aria-hidden="true"></i>
                                 </a>
-                                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                                <a href="https://www.xing.com/profile/ChristianKoller_Nielsen/cv" rel="noopener noreferrer" target="_blank">
                                     <i className="fa fa-xing-square" aria-hidden="true"></i>
                                 </a>
-                                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                                <a href="https://github.com/ckoller" rel="noopener noreferrer" target="_blank">
                                     <i className="fa fa-github-square" aria-hidden="true"></i>
                                 </a>
-                                <a href="http://google.com" rel="noopener noreferrer" target="_blank">
+                                <a href="https://bitbucket.org/%7Bd453435d-041d-41a8-a630-92e906180cda%7D/?visibility=all" rel="noopener noreferrer" target="_blank">
                                     <i className="fa fa-bitbucket-square" aria-hidden="true"></i>
                                 </a>
 

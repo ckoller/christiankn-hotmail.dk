@@ -14,9 +14,7 @@ class Contact extends Component {
                             style={{height: '250px'}}
                         />
                         <p>
-                            I just finished a masters degree in computer science specializing in cryptology.
-                            My fields of interest are cryptology, security, software development, web-development,
-                            blockchain, peer-to-peer systems and data science.
+                            asasdasdas
                         </p>
                     </Cell>
                     <Cell col={6}>

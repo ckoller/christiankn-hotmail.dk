@@ -1,12 +1,16 @@
 import React, {Component} from "react";
 import {Tab, Tabs, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton} from 'react-mdl';
+import priv_ml from './../documents/privacy_machine_learning.pdf';
+import bl_chain from './../documents/Blockchain_Project.pdf';
+import mpc from './../documents/Circuit_Evaluation_Protocols_in_Practice.pdf';
+import {Link} from "react-router-dom";
+
 
 class Projects extends Component {
     constructor(props) {
         super(props);
         this.state = {activeTab: 2};
     }
-
 
     toggleCategories() {
         if (this.state.activeTab === 0) {
@@ -21,8 +25,13 @@ class Projects extends Component {
                         Secure Multiparty Computation Project is the bomb.
                     </CardText>
                     <CardActions border>
-                        <Button colored>GitHub</Button>
-                        <Button colored>PDF</Button>
+                        <a href="https://github.com/ckoller/secretsharing"
+                           rel="noopener noreferrer" target="_blank">
+                            <Button colored>GitHub</Button>
+                        </a>
+                        <a href={mpc} download>
+                            <Button colored>PDF</Button>
+                        </a>
                     </CardActions>
                     <CardMenu style={{color: '#fff'}}>
                         <IconButton name="share"/>
@@ -41,8 +50,13 @@ class Projects extends Component {
                         Obtaining Privacy in collaborative machine learning through differential privacy.
                     </CardText>
                     <CardActions border>
-                        <Button colored>GitHub</Button>
-                        <Button colored>PDF</Button>
+                        <a href="https://github.com/B14m3m3/Privacy-preserving-ML"
+                           rel="noopener noreferrer" target="_blank">
+                            <Button colored>GitHub</Button>
+                        </a>
+                        <a href={priv_ml} download>
+                            <Button colored>PDF</Button>
+                        </a>
                     </CardActions>
                     <CardMenu style={{color: '#fff'}}>
                         <IconButton name="share"/>
@@ -61,8 +75,9 @@ class Projects extends Component {
                         Purely theoretical project about consensus algorithms, tree growth and finalization.
                     </CardText>
                     <CardActions border>
-                        <Button colored>GitHub</Button>
-                        <Button colored>PDF</Button>
+                        <a href={bl_chain} download>
+                            <Button colored>PDF</Button>
+                        </a>
                     </CardActions>
                     <CardMenu style={{color: '#fff'}}>
                         <IconButton name="share"/>
@@ -71,26 +86,57 @@ class Projects extends Component {
             )
         } else if (this.state.activeTab === 3) {
             return (
-                <Card shadow={4} style={{width: '450px', margin: 'auto'}}>
-                    <CardTitle style={{
-                        color: '#fff',
-                        height: '176px',
-                        background: 'url(https://i.pinimg.com/originals/24/2b/4f/242b4f66b6d14b8a331c6e4289fe2ef5.jpg) center / cover'
-                    }}>P2P Music Streaming</CardTitle>
-                    <CardText>
-                        Stream your music on your friends devices through P2P.
-                    </CardText>
-                    <CardActions border>
-                        <Button colored>GitHub</Button>
-                        <Button colored>PDF</Button>
-                    </CardActions>
-                    <CardMenu style={{color: '#fff'}}>
-                        <IconButton name="share"/>
-                    </CardMenu>
-                </Card>
+                <Grid>
+                    <Cell col={12}>
+                        <Card shadow={4} style={{width: '450px', margin: 'auto'}}>
+                            <CardTitle style={{
+                                color: '#fff',
+                                height: '176px',
+                                background: 'url(https://i.pinimg.com/originals/24/2b/4f/242b4f66b6d14b8a331c6e4289fe2ef5.jpg) center / cover'
+                            }}>P2P Music Streaming</CardTitle>
+                            <CardText>
+                                Stream your music on your friends devices through P2P.
+                            </CardText>
+                            <CardActions border>
+                                <a href="https://bitbucket.org/B14m3m3/p2p-musicv2/src"
+                                   rel="noopener noreferrer" target="_blank">
+                                    <Button colored>BitBucket</Button>
+                                </a>
+                                <a href={mpc} download>
+                                    <Button colored>PDF</Button>
+                                </a>
+                            </CardActions>
+                            <CardMenu style={{color: '#fff'}}>
+                                <IconButton name="share"/>
+                            </CardMenu>
+                        </Card>
+                    </Cell>
+                    <Cell col={12}>
+                        <Card shadow={4} style={{width: '450px', margin: 'auto'}}>
+                            <CardTitle style={{
+                                color: '#fff',
+                                height: '176px',
+                                background: 'url(https://i.pinimg.com/originals/24/2b/4f/242b4f66b6d14b8a331c6e4289fe2ef5.jpg) center / cover'
+                            }}>P2P Chord</CardTitle>
+                            <CardText>
+                                Implementation of the Chord Protocol, where a Photon (IOT device) can connect.
+                            </CardText>
+                            <CardActions border>
+                                <a href="https://bitbucket.org/B14m3m3/iot-p2p/src/master/"
+                                   rel="noopener noreferrer" target="_blank">
+                                    <Button colored>BitBucket</Button>
+                                </a>
+                            </CardActions>
+                            <CardMenu style={{color: '#fff'}}>
+                                <IconButton name="share"/>
+                            </CardMenu>
+                        </Card>
+                    </Cell>
+
+                </Grid>
+
             )
         }
-
     }
 
     render() {
@@ -101,7 +147,7 @@ class Projects extends Component {
                     <Tab>Secure Multiparty Computation</Tab>
                     <Tab>Privacy in Machine Learning</Tab>
                     <Tab>Blockchain</Tab>
-                    <Tab>P2P Music Streaming</Tab>
+                    <Tab>P2P</Tab>
                 </Tabs>
                 <section>
                     <Grid className="projects-grid">
